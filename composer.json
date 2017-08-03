@@ -1,5 +1,5 @@
 {
-  "name": "zanphp/nosql",
+  "name": "zanphp/routing",
   "repositories": {
     "packagist": {
       "type": "composer",
