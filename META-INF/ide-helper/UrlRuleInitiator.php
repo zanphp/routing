@@ -2,14 +2,17 @@
 
 namespace Zan\Framework\Network\Http\Routing;
 
-use Zan\Framework\Utilities\DesignPattern\Singleton;
-
 class UrlRuleInitiator
 {
-    use Singleton;
+    private $UrlRuleInitiator;
+
+    public function __construct()
+    {
+        $this->UrlRuleInitiator = new \ZanPHP\Routing\UrlRuleInitiator();
+    }
 
     public function init()
     {
-
+        $this->UrlRuleInitiator->init();
     }
 } 

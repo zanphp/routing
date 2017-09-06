@@ -2,14 +2,17 @@
 
 namespace Zan\Framework\Network\Http\Routing;
 
-use Zan\Framework\Utilities\DesignPattern\Singleton;
-
 class RouteInitiator
 {
-    use Singleton;
+    private $RouteInitiator;
+
+    public function __construct()
+    {
+        $this->RouteInitiator = new \ZanPHP\Routing\RouteInitiator();
+    }
 
     public function init(array $config)
     {
-
+        $this->RouteInitiator->init($config);
     }
 } 

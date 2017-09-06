@@ -2,7 +2,7 @@
 
 namespace Zan\Framework\Network\Http\Routing;
 
-use Zan\Framework\Network\Http\Request\Request;
+use ZanPHP\HttpFoundation\Request\Request;
 
 interface IRouter
 {

@@ -1,30 +1,30 @@
 <?php
+
 namespace Zan\Framework\Network\Http\Routing;
 
-use Zan\Framework\Network\Http\Request\Request;
-use Zan\Framework\Utilities\DesignPattern\Singleton;
+use ZanPHP\HttpFoundation\Request\Request;
 
 class Router
 {
+    private $Router;
 
-    use Singleton;
+    public function __construct()
+    {
+        $this->Router = new \ZanPHP\Routing\Router();
+    }
 
     public function init($config)
     {
-
+        $this->Router->init($config);
     }
 
     public function route(Request $request)
     {
-
+        $this->Router->route($request);
     }
 
-    /**
-     * @param $uri
-     * @return mixed
-     */
     public function handleUri($uri)
     {
-
+        $this->Router->handleUri($uri);
     }
 }
