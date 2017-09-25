@@ -17,7 +17,10 @@ class UrlRule
     public static function loadRules()
     {
         $repository = make(Repository::class);
-        $routeFiles = Dir::glob($repository->get('path.routing'), '*.routing.php');
+        $path = $repository->get('path.routing');
+        if (!is_dir($path))
+            return false;
+        $routeFiles = Dir::glob($path, '*.routing.php');
 
         if (!$routeFiles) return false;
 
